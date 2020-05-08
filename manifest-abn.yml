@@ -1,0 +1,10 @@
+organization: BAG-PEPP-PT
+applications:
+- name: ha-ui
+  path: ./dist
+  buildpack: staticfile_buildpack
+  disk_quota: 768M
+  instances: 1
+  memory: 128M
+  routes:
+  - route: www.covidcode-a.admin.ch
