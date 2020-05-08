@@ -1,9 +1,0 @@
-@Library('jeap-pipelinelibrary@master') _
-nodejsPipelineReleaseTemplate {
-  skipTests = true
-  skipCodeInspection = true
-  testEngine = 'jest'
-  bitBucketProjectKey = 'BAG_COVIDCODE'
-  bitBucketRepoName = 'ha-ui.git'
-  deployCloudFoundry = ['deployConfig': null]	// conf is inferred from pipeline parameters
-}
