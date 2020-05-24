@@ -17,7 +17,7 @@ RUN npm install @oblique/oblique
 
 
 RUN npm install -g @angular/cli@7.3.9
-RUN npm ci
+RUN npm install
 
 # add app
 COPY . /app
