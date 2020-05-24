@@ -49,6 +49,7 @@ export class AuthGuardService implements CanActivate, CanActivateChild, CanLoad 
 	}
 
 	private checkExpectedRoleAfterAuthentication(claims: Claims): boolean {
+		console.log(claims);
 		if (!claims) {
 			this.router.navigate(['auth/auto-login']);
 			return false;
@@ -56,7 +57,8 @@ export class AuthGuardService implements CanActivate, CanActivateChild, CanLoad 
 
 		const hasAccess = this.oauthService.hasUserRole(Role.HaUI, claims);
 		if (!hasAccess) {
-			this.window.location.href = `https://www.eiam.admin.ch/?c=f!403pts!pub&l=${this.translate.currentLang}`;
+			console.log(claims);
+			//this.window.location.href = `https://www.eiam.admin.ch/?c=f!403pts!pub&l=${this.translate.currentLang}`;
 		}
 		return hasAccess;
 	}
