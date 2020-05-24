@@ -17,10 +17,10 @@ RUN npm install @oblique/oblique
 
 
 RUN npm install -g @angular/cli@7.3.9
-RUN npm install
+RUN npm ci
 
 # add app
 COPY . /app
 
 # start app
-CMD ng serve --host 0.0.0.0
+CMD ng serve -c dev --host 0.0.0.0
