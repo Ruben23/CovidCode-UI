@@ -9,15 +9,15 @@ export const environment = {
 	eiamSelfAdmin: 'https://eiam.chCURRENT_PAGE&language=LANGUAGE',
 	oidc: {
 		// The clientID as used in keycloak or mock server
-		clientId: 'ha-ui-web-client',
+		clientId: 'CovidCode-UI',
 		// Site to open after successful login
 		afterLoginPath: 'generate-code',
 		// Path to the login server
-		stsServer: 'http://localhost:8180',
+		stsServer: 'http://172.18.50.35:8080',
 		// The URL of this application, used e.g. for redirect URLs
-		applicationUrl: 'http://localhost:4200/auth/login-feedback/',
+		applicationUrl: 'http://172.18.50.35:4200/auth/login-feedback/',
 		// The URL to go to after a logout, e.g, e-portal
-		post_logout_redirect_uri: 'http://localhost:4200/',
+		post_logout_redirect_uri: 'http://172.18.50.35:4200/',
 		// Use silent-renew. In prod this should be used, but with mock server it does not work
 		silentRenew: true,
 		// Is the user always required to log in?
