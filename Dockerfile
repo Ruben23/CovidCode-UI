@@ -13,8 +13,14 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
 COPY package.json /app/package.json
-RUN npm install
+RUN npm install @oblique/oblique
+RUN npm install @ngx-translate/core
+RUN npm install @angular/localize
+RUN npm install @ts-morph/common  
+RUN ng install @angular/localize
+
 RUN npm install -g @angular/cli@7.3.9
+RUN npm install
 
 # add app
 COPY . /app
